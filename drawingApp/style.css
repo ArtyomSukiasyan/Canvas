@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.6em 1em;
+  border-radius: 3px;
+  background-color: #03bb56;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav {
+  width: 310px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  padding-top: 50px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s;
+}
