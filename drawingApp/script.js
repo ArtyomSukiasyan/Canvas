@@ -1,4 +1,5 @@
 const clearBtn = document.querySelector(".clear");
+const saveBtn = document.querySelector(".save");
 
 let canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 50;
@@ -41,4 +42,14 @@ window.addEventListener("mousemove", (e) => {
 
 clearBtn.addEventListener("click", () => {
   context.clearRect(0, 0, canvas.width - 1, canvas.height - 1);
+});
+
+saveBtn.addEventListener("click", () => {
+  const data = canvas.toDataURL();
+  const a = document.createElement("a");
+
+  a.href = data;
+  a.download = "drawing.webp";
+
+  a.click();
 });
