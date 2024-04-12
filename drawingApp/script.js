@@ -9,8 +9,17 @@ context.strokeRect(0, 0, canvas.width, canvas.height);
 let prevX = null;
 let prevY = null;
 
+let isDraw = false;
+
+window.addEventListener("mousedown", () => {
+  isDraw = true;
+});
+window.addEventListener("mouseup", () => {
+  isDraw = false;
+});
+
 window.addEventListener("mousemove", (e) => {
-  if (!prevX || !prevY) {
+  if (!prevX || !prevY || !isDraw) {
     prevX = e.clientX;
     prevY = e.clientY;
 
