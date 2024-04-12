@@ -8,6 +8,14 @@ canvas.height = window.innerHeight - 50;
 let context = canvas.getContext("2d");
 context.lineWidth = 5;
 
+let colors = document.querySelectorAll(".color");
+colors = Array.from(colors);
+colors.forEach((color) => {
+  color.addEventListener("click", () => {
+    context.strokeStyle = color.dataset.color;
+  });
+});
+
 let prevX = null;
 let prevY = null;
 

@@ -33,6 +33,40 @@ button {
   transition: opacity 0.5s;
 }
 
+.color {
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  border-radius: 50%;
+  border: 3px solid rgb(214, 214, 214);
+  transition: transform 0.5s;
+}
+
+.color:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.color:nth-child(1) {
+  background-color: #000;
+}
+
+.color:nth-child(2) {
+  background-color: #ef626c;
+}
+
+.color:nth-child(3) {
+  background-color: #fdec03;
+}
+
+.color:nth-child(4) {
+  background-color: #24d102;
+}
+
+.color:nth-child(5) {
+  background-color: #fff;
+}
+
 .save {
   background-color: #0f65d4;
 }
