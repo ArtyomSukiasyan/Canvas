@@ -6,3 +6,25 @@ let context = canvas.getContext("2d");
 context.lineWidth = 5;
 context.strokeRect(0, 0, canvas.width, canvas.height);
 
+let prevX = null;
+let prevY = null;
+
+window.addEventListener("mousemove", (e) => {
+  if (!prevX || !prevY) {
+    prevX = e.clientX;
+    prevY = e.clientY;
+
+    return;
+  }
+
+  let mouseX = e.clientX;
+  let mouseY = e.clientY;
+
+  context.beginPath();
+  context.moveTo(prevX, prevY);
+  context.lineTo(mouseX, mouseY);
+  context.stroke();
+
+  prevX = e.clientX;
+  prevY = e.clientY;
+});
